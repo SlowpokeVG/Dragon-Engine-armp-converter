@@ -167,14 +167,17 @@ function parseTable(offset) {
 
 
     for (let row = 0; row<rowCount; row++) {
-        let rowName = row+". "+rowIDs[row];
-        if (rowIDs[row] == undefined) rowName = row
+        let rowName = row;
+        if (row != rowOrder[row]) rowName += "("+rowOrder[row]+")";
+        if (rowIDs[row] != undefined) rowName += ". "+rowIDs[row];
+
         jsonObject[rowName] = {};
         
         for (let column = 0; column<columnCount; column++)
         {       
-                let columnName = column+". "+columnIDs[column];
-                if (columnIDs[column] == undefined) columnName = column
+                let columnName = column;
+                //if (column != columnOrder[column]) columnName += "("+columnOrder[column]+")";
+                if (columnIDs[column] != undefined) columnName += ". "+columnIDs[column];
                 jsonObject[rowName][columnName] = content[column][row]; 
         }
 
