@@ -138,7 +138,7 @@ function parseTable(offset) {
                         content[column][row] = armpFile.readInt32LE(pointersToContent[column] + 8*row);
                 if (columnTypes[column] == 9)
                     for (let row = 0; row<rowCount; row++)
-                        content[column][row] = armpFile.readFloatLE(pointersToContent[column] + 8*row);
+                        content[column][row] = armpFile.readFloatLE(pointersToContent[column] + 4*row);
                 if (columnTypes[column] == 11)
                 {
                     bitArray = decBin(armpFile.readInt32LE(pointersToContent[column]), rowCount);
