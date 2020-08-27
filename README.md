@@ -1,4 +1,9 @@
-# Dragon Engine armp converter
+# Discontinued
+Use [reARMP](https://github.com/CapitanRetraso/reARMP) by [CapitanRetraso](https://github.com/CapitanRetraso)
+
+
+
+## Dragon Engine armp converter
 WIP converter for Dragon Engine .bin armp files
 
 
